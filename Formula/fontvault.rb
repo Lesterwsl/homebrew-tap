@@ -5,10 +5,10 @@ class Fontvault < Formula
   sha256 "dac4fb54062622af58c98df6b6c2d4d12afc2b0476c7addac29cb5248d16f9ab"
   license "MIT"
 
-  depends_on :macos
   depends_on "gh"
   depends_on "git"
   depends_on "jq"
+  depends_on :macos
 
   def install
     bin.install "bin/fontvault"
@@ -21,4 +21,3 @@ class Fontvault < Formula
     assert_match "fontvault backup", shell_output("#{bin}/fontvault help")
   end
 end
-
