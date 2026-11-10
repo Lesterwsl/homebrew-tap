@@ -1,8 +1,8 @@
 class Fontvault < Formula
   desc "Back up macOS fonts, Homebrew packages, and application inventory"
   homepage "https://github.com/Lesterwsl/fontvault-cli"
-  url "https://github.com/Lesterwsl/fontvault-cli/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "d4baa8c0834121d92bb63631e48d98e9930f8d457bf377bbea95a168eda896c4"
+  url "https://github.com/Lesterwsl/fontvault-cli/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "ea599164bc7b3566fc0e3a6e442b120e1a1a8931923d7da1ea3ebf78a7b7994d"
   license "MIT"
 
   depends_on "gh"
@@ -17,7 +17,7 @@ class Fontvault < Formula
   end
 
   test do
-    assert_match "fontvault 1.0.1", shell_output("#{bin}/fontvault version")
+    assert_match "fontvault 1.1.0", shell_output("#{bin}/fontvault version")
     assert_match "fontvault backup", shell_output("#{bin}/fontvault help")
   end
 end
